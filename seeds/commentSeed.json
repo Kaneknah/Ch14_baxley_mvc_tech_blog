@@ -1,0 +1,22 @@
+[
+	{
+		"comment_body": "Hey this is super interesting",
+		"user_id": 3,
+		"post_id": 1
+	},
+	{
+		"comment_body": "that is some damn fine Lorem Ipsum!",
+		"user_id": 1,
+		"post_id": 1
+	},
+	{
+		"comment_body": "Serve me up a steaming slice of Lorem Ipsum.",
+		"user_id": 1,
+		"post_id": 2
+	},
+	{
+		"comment_body": "I have a fever! and the only prescription..is more Lorem Ipsum!!",
+		"user_id": 2,
+		"post_id": 2
+	}
+]
