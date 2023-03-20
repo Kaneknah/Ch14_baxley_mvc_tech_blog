@@ -16,6 +16,8 @@ router.get("/signup", (req, res) => {
 	res.render("signup");
 });
 
+//route for rendering dashboard
+
 //route to find all posts
 router.get("/", (req, res) => {
 	Post.findAll({
@@ -90,3 +92,5 @@ router.get("/post/:id", (req, res) => {
 			res.status(500).json(err);
 		});
 });
+
+module.exports = router;
