@@ -1,17 +1,17 @@
-async function newCommentFormHandler(event) {
+async function newPostFormHandler(event) {
 	event.preventDefault();
 
 	const title = document.querySelector('input[name="post-title"]').value;
-	const content = document.querySelector('input[name="post-body"]').value;
+	const body = document.querySelector('input[name="post-body"]').value;
 
 	const response = await fetch(`/api/post`, {
 		method: "POST",
 		body: JSON.stringify({
 			title,
-			content,
+			body,
 		}),
 		headers: {
-			"Content-Type": "application/json",
+			"Body-Type": "application/json",
 		},
 	});
 
@@ -24,4 +24,4 @@ async function newCommentFormHandler(event) {
 
 document
 	.querySelector("#new-post-form")
-	.addEventListener("submit", newFormHandler);
+	.addEventListener("submit", newPostFormHandler);
