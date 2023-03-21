@@ -17,15 +17,17 @@ router.get("/signup", (req, res) => {
 });
 
 //route for rendering dashboard
-
+router.get("/dashboard", (req, res) => {
+	res.render("dashboard");
+});
 //route to find all posts
 router.get("/", (req, res) => {
 	Post.findAll({
-		attributes: ["id", "title", "content", "created_at"],
+		attributes: ["id", "title", "body", "created_at"],
 		include: [
 			{
 				model: Comment,
-				attributes: ["id", "comment_text", "post_id", "user_id", "created_at"],
+				attributes: ["id", "comment_body", "post_id", "user_id", "created_at"],
 				include: {
 					model: User,
 					attributes: ["username"],
@@ -52,17 +54,17 @@ router.get("/", (req, res) => {
 		});
 });
 
-//route for finding one post
+//route for finding a single post for render
 router.get("/post/:id", (req, res) => {
 	Post.findOne({
 		where: {
 			id: req.params.id,
 		},
-		attributes: ["id", "content", "title", "created_at"],
+		attributes: ["id", "title", "body", "created_at"],
 		include: [
 			{
 				model: Comment,
-				attributes: ["id", "comment_text", "post_id", "user_id", "created_at"],
+				attributes: ["id", "comment_body", "post_id", "user_id", "created_at"],
 				include: {
 					model: User,
 					attributes: ["username"],
