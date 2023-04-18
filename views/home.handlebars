@@ -1,7 +1,10 @@
-<article class="post">
-
-  {{#each posts as |post| }}
-  {{> post-info post}}
-  {{/each}}
-
-</article>
+{{#each posts}}
+	<div class="post">
+		<h2>{{title}}</h2>
+		<p>{{body}}</p>
+		<p class="post-meta">
+			Posted by {{username}} on {{createdAt}}
+			<a href="/post/{{id}}">View Post</a>
+		</p>
+	</div>
+{{/each}}
