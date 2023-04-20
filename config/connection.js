@@ -1,6 +1,6 @@
 const Sequelize = require("sequelize");
 require("dotenv").config();
-
+//sets up the  connector for Sequelize and the process.envs for name, user and password.
 let sequelize;
 
 if (process.env.JAWSDB_URL) {

@@ -42,7 +42,7 @@ router.get("/", (req, res) => {
 		//code for rendering posts
 		.then((dbPostData) => {
 			const posts = dbPostData.map((post) => post.get({ plain: true }));
-			res.render("homepage", {
+			res.render("home", {
 				posts,
 				logged_in: req.session.logged_in,
 				username: req.session.username,

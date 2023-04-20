@@ -1,3 +1,5 @@
+
+//code for adding a new comment. The comment is connected to a post by its ID. 
 async function newCommentFormHandler(event) {
 	event.preventDefault();
 

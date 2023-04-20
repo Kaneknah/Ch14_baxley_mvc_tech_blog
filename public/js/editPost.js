@@ -1,3 +1,4 @@
+//Code for editing a post. it finds the post by ID and then replaces it with the new data.
 async function editPostFormHandler(event) {
 	event.preventDefault();
 

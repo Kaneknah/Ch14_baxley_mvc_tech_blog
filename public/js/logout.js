@@ -1,3 +1,4 @@
+//Simple text for logging a user out via a post fetch.
 async function logout() {
 	const response = await fetch("/api/user/logout", {
 		method: "post",

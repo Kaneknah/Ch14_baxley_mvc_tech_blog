@@ -1,3 +1,4 @@
+//code for loggin into the application. it finds a user by username and checks password.
 async function loginFormHandler(event) {
 	event.preventDefault();
 

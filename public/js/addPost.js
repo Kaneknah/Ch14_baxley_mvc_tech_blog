@@ -3,7 +3,7 @@ async function newPostFormHandler(event) {
 
 	const title = document.querySelector('input[name="post-title"]').value;
 	const body = document.querySelector('input[name="post-body"]').value;
-
+//cod efor adding a post with a body and title.
 	const response = await fetch(`/api/post`, {
 		method: "POST",
 		body: JSON.stringify({

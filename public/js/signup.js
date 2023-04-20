@@ -1,4 +1,4 @@
-//function for handling the signup event
+//Code for signing up a user. Adds a user with post method and takes in email, username, and password. 
 async function signupFormHandler(event) {
 	event.preventDefault();
 	const username = document.querySelector("#username-signup").value.trim();
