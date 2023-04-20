@@ -1,4 +1,4 @@
-# ch19_baxley_text_editor
+# ch14_baxley_mvc_tech_blog
 
 ## Table of Contents:
 
