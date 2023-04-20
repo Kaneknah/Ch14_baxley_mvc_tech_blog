@@ -1,10 +1,30 @@
+<!-- views/homepage.handlebars -->
+
+{{#if logged_in}}
+  <p>Welcome, {{username}}!</p>
+  <a href="/dashboard">Dashboard</a>
+  <a href="/logout">Logout</a>
+{{else}}
+  <a href="/login">Login</a>
+  <a href="/signup">Signup</a>
+{{/if}}
+
 {{#each posts}}
-	<div class="post">
-		<h2>{{title}}</h2>
-		<p>{{body}}</p>
-		<p class="post-meta">
-			Posted by {{username}} on {{createdAt}}
-			<a href="/post/{{id}}">View Post</a>
-		</p>
-	</div>
+  <div class="post">
+    <h2>{{title}}</h2>
+    <p>{{body}}</p>
+    <p>Posted by {{user.username}} on {{created_at}}</p>
+
+    {{#if comments.length}}
+      <h3>Comments:</h3>
+      {{#each comments}}
+        <div class="comment">
+          <p>{{comment_body}}</p>
+          <p>Comment by {{user.username}} on {{created_at}}</p>
+        </div>
+      {{/each}}
+    {{/if}}
+
+    <a href="/post/{{id}}">View Post</a>
+  </div>
 {{/each}}
