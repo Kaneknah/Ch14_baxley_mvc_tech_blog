@@ -55,11 +55,11 @@ THEN I am able to view comments but I am prompted to log in again before I can a
 
 ## Installation
 
-A user will need to instal the package.json modules in order to run this application. The user may do this by simply running "npm i" in the terminal. This will install all modules as well as the webpack.config documents.
+A user will need to instal the package.json modules in order to run this application. The user may do this by simply running <b>npm i</b> in the terminal. This will install all modules as well as the webpack.config documents. The user will then need to input the seeds by entering <b> npm run seed</b>.
 
 ## Usage
 
-The user will access the application via Heroku. The user will simply need to follow the below link to access the application. the user will then follow the prompts to access the text editor application.
+The user will be presented with a home page with the ability to see posts and comments connected to them. the user will have the ability to log in to see their own dashboard, where they may enter their own posts or delete them as needed. 
 
 ## Contribution
 
@@ -77,14 +77,14 @@ No testing was utilized for this project
 
 ### Technologies utilized:
 
-- webpackManifest
+- express-handebars
 - Express.js
 - Sequelize
 - Node.js
-- IndexedDB
-- babel-loader
-- css-loader
-- style-loader
+- MySQL2
+- dontenv 
+- bcrypt
+- Express-session
 
 ### GitHub Link: https://github.com/Kaneknah/ch14_baxley_mvc_tech_blog
 
